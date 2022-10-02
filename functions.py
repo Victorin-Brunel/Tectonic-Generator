@@ -1,7 +1,7 @@
 from random import choice
 
 def isFin(m, arg):
-   '''Check if a matrice (m) has a cell with arg in it'''
+   '''Check if a matrix (m) has a cell with arg in it'''
    for i in range(len(m)):
       for j in range(len(m[0])):
          if m[i][j] == arg:
@@ -21,7 +21,7 @@ def next(t, tform):
    return a
 
 def inGrid(cx, cy, tf, tm):
-   '''Check if a matrice f can fit in a matrice m with the coefficients cx and cy'''
+   '''Check if a matrix f can fit in a matrix m with the coefficients cx and cy'''
    if cx < 0 or cy < 0 or tf[0] + cy > tm[0] or tf[1] + cx > tm[1]:
       return False
    return True
