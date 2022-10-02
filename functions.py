@@ -1,6 +1,7 @@
 from random import choice
 
 def isFin(m, arg):
+   '''Check if a matrice (m) has a cell with arg in it'''
    for i in range(len(m)):
       for j in range(len(m[0])):
          if m[i][j] == arg:
@@ -8,6 +9,7 @@ def isFin(m, arg):
    return False
 
 def next(t, tform):
+   '''Find the next cell without any form in it, and with the biggest number'''
    a = [0, None, None]
    for i in range(len(t)):
       for j in range(len(t[0])):
@@ -19,11 +21,13 @@ def next(t, tform):
    return a
 
 def inGrid(cx, cy, tf, tm):
+   '''Check if a matrice f can fit in a matrice m with the coefficients cx and cy'''
    if cx < 0 or cy < 0 or tf[0] + cy > tm[0] or tf[1] + cx > tm[1]:
       return False
    return True
 
 def with0(fo, gr, cx, cy):
+   '''Check if a form can fit in a formTab'''
    for i in range(len(fo)):
       for j in range(len(fo[0])):
          if fo[i][j] == 1 and gr[i + cy][j + cx] != 0:
@@ -31,6 +35,7 @@ def with0(fo, gr, cx, cy):
    return True
 
 def allNums(fo, tab, cx, cy):
+   '''Check if all the nums in the form are from 1 to n'''
    liste = []
    for i in range(len(fo)):
       for j in range(len(fo[0])):
@@ -46,6 +51,7 @@ def allNums(fo, tab, cx, cy):
    return True
 
 def testNear(co, tab):
+   '''Check if the number at co is not present in the surrounding cells'''
    for i in range(-1, 2):
       for j in range(-1, 2):
          if i != 0 or j != 0:
@@ -57,6 +63,7 @@ def testNear(co, tab):
    return True
    
 def testForm(co, tab, formTab):
+   '''Check if the numbers in the form are valid'''
    l = []
    for i in range(-4, 5):
       for j in range(-4, 5):
@@ -77,12 +84,14 @@ def testForm(co, tab, formTab):
    return True
          
 def next2(tab):
+   '''Find the next cell to put a number in'''
    for j in range(len(tab)):
       for i in range(len(tab[0])):
          if tab[j][i] == 0:
             return j, i
 
 def extract(liste):
+   '''Choose randomly an item from a list, remove it, and return it'''
    if len(liste) > 0:
       a = choice(liste)
       liste.remove(a)
