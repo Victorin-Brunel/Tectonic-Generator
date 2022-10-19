@@ -20,7 +20,7 @@ Ensuite, on ne peut pas placer de 1 dans la case du milieu, en raison de la pré
 
 ![image](https://user-images.githubusercontent.com/83453511/196715232-81bf7d37-337b-4218-a8ee-65f327a7b3b7.png)
 
-Il ne reste qu'une seule case à compléter, qui ne peut être qu'un deux (deuxième régle).
+Il ne reste qu'une seule case à compléter, qui ne peut être qu'un 2 (deuxième régle).
 
 On obtient donc la grille suivante : ![image](https://user-images.githubusercontent.com/83453511/196715551-639b5e95-dde7-4530-af71-01dd730c7be5.png)
 
