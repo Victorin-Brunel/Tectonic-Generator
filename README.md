@@ -31,4 +31,4 @@ Etant très passionné par ce jeu, j'ai voulu créer un algorithme permettant de
 Le programme se présente comme cela : 
 ![image](https://user-images.githubusercontent.com/83453511/196716254-ebc95f7c-66df-4b9f-85fc-c4459599627d.png)
 
-Il possible de sélectionner à droite la taille de la grille ainsi que de générer des grilles qui s'affichent à gauche de l'écran.
+Il est possible de sélectionner à droite la taille de la grille ainsi que de générer des grilles qui s'affichent à gauche de l'écran.
