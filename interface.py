@@ -31,17 +31,11 @@ def g(x, y):
          
          for i in range(1, x):
             for j in range(y):
-               if formTab[j][i] == formTab[j][i - 1]:
-                  canvas.create_line(x1 + i * length, y1 + j * length - 1, x1 + i * length, y1 + (j + 1) * length - 3 * (j == y - 1) + 2, width = 1)
-               else:
-                  canvas.create_line(x1 + i * length, y1 + j * length - 1, x1 + i * length, y1 + (j + 1) * length - 3 * (j == y - 1) + 2, width = 3)
-         
+               canvas.create_line(x1 + i * length, y1 + j * length - 1, x1 + i * length, y1 + (j + 1) * length - 3 * (j == y - 1) + 2, width = 1 if formTab[j][i] == formTab[j][i - 1] else 3)
+               
          for i in range(1, y):
             for j in range(x):
-               if formTab[i][j] == formTab[i - 1][j]:
-                  canvas.create_line(x1 + j * length - 1, y1 + i * length, x1 + (j + 1) * length - 3 * (j == x - 1) + 2, y1  + i * length, width = 1)
-               else:
-                  canvas.create_line(x1 + j * length - 1, y1 + i * length, x1 + (j + 1) * length - 3 * (j == x - 1) + 2, y1  + i * length, width = 3)
+               canvas.create_line(x1 + j * length - 1, y1 + i * length, x1 + (j + 1) * length - 3 * (j == x - 1) + 2, y1  + i * length, width = 1 if formTab[i][j] == formTab[i - 1][j] else 3)
       
          for i in range(x):
             for j in range(y):
