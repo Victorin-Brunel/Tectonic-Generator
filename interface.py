@@ -1,7 +1,6 @@
 from tkinter import *
 from tectonic import *
 
-
 def g(x, y):
    canvas.delete("all")
    if x * y > 35:
