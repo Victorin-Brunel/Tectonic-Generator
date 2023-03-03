@@ -45,6 +45,7 @@ def g(x, y):
 
 window = Tk()
 window.title("Tectonic Generator")
+window.iconbitmap("T.ico")
 window.minsize(500, 370)
 window.maxsize(500, 370)
 window.rowconfigure(0, minsize = 80)
